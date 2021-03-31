@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Coding Bootcamp Testimonials Slider</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <div class="testimonials">
+        <div class="testimonial-text">
+          <div class="text text1">
+            <p>
+              “ I’ve been interested in coding for a while but never taken the
+              jump, until now. I couldn’t recommend this course enough. I’m now
+              in the job of my dreams and so excited about the future. ”
+            </p>
+            <h6>Tanya Sinclair</h6>
+            <span>UX Engineer</span>
+          </div>
+          <div class="text text2 hide">
+            <p>
+              “ If you want to lay the best foundation possible I’d recommend
+              taking this course. The depth the instructors go into is
+              incredible. I now feel so confident about starting up as a
+              professional developer. ”
+            </p>
+            <h6>John Tarkpor</h6>
+            <span>Junior Front-end Developer</span>
+          </div>
+        </div>
+        <div class="profile-img">
+          <div class="img-div">
+            <img src="images/image-tanya.jpg" alt="" />
+          </div>
+          <div class="img-div hide">
+            <img src="images/image-john.jpg" alt="" />
+          </div>
+        </div>
+      </div>
+      <!-- slider-buttons -->
+      <div class="sliders">
+        <button class="prev-btn" onclick="slide()">
+          <img src="images/icon-prev.svg" alt="" />
+        </button>
+
+        <button class="next-btn" onclick="slide()">
+          <img src="images/icon-next.svg" alt="" />
+        </button>
+      </div>
+    </main>
+
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/tushar416">Tushar Mehra</a>.
+    </div>
+    <script>
+      let btnNext = document.querySelector(".btn-next");
+      let btnPrev = document.querySelector(".btn-prev");
+      let text = document.querySelectorAll(".text");
+      let imgDiv = document.querySelectorAll(".img-div");
+      function slide() {
+        imgDiv[1].classList.toggle("hide");
+        text[1].classList.toggle("hide");
+        text[0].classList.toggle("hide");
+        imgDiv[0].classList.toggle("hide");
+      }
+    </script>
+  </body>
+</html>
